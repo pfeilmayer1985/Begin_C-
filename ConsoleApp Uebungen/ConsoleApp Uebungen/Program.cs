@@ -11,30 +11,12 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Write a list of whatever, words separated with ';' : ");
+            Console.WriteLine("Write me something nice : ");
             string myInput = Console.ReadLine();
-            string[] myInputArray = myInput.Split(';');
 
-            foreach (string wort in myInputArray)
-            {
-                Console.WriteLine(wort);
-            }
+            bool myOutput = myInput.Contains("abc");
+            Console.WriteLine(myOutput);    
 
-
-
-            //Console.WriteLine($"Your text initial text is : ={myInput}=");
-            //string myAlteredInput = myInput.Trim(' ');
-
-           // Console.WriteLine($"Your cleaned up text is : ={myAlteredInput}=");
-
-            /* 
-             string[] myInputArray = myInput.Split();
-            
-            for (int i = 0; i <= 20; i++)
-            {
-                Console.WriteLine(myInputArray[i].Replace('y');
-            }
-            */
             Console.ReadLine();
 
 
