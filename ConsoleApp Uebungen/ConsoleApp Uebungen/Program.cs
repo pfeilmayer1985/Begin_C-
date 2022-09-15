@@ -10,13 +10,32 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
+
+            string nameArray = "Mona,Marie,Erwin,Marcello,Jonas,Philipp,Andreas,Lukas,Johannes,Leon,Robin,Niklas,Robert,Jan";
+            string[] mySplittedArray = nameArray.Split(',');
+
+
+
+            foreach (string wort in mySplittedArray)
+            {
+                bool myOutput = wort.Contains("e");
+                if (myOutput.Equals(true))
+                {
+                    Console.WriteLine(wort);
+                }
+            }
+
+
+
+
+            /*
             Console.WriteLine("Your number : ");
             int myInput = Convert.ToInt32(Console.ReadLine());
             for (int i = myInput; i >= 0; i--)
             {
                 Console.WriteLine(i);
             }
-
+            */
 
             /*
             Console.WriteLine("Your number : ");
@@ -26,7 +45,7 @@ namespace ConsoleApp_Uebungen
             for (int i = 0; i <= myInput; i++)
             {
                 Console.WriteLine($"Current number : {i}");
-                
+
                 addierung = addierung + i;
                 Console.WriteLine($"Sum : {addierung}");
             }
