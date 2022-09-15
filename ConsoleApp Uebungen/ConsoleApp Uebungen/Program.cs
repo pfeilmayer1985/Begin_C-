@@ -10,7 +10,15 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Your number : ");
+            int myInput = Convert.ToInt32(Console.ReadLine());
+            for (int i = myInput; i >= 0; i--)
+            {
+                Console.WriteLine(i);
+            }
 
+
+            /*
             Console.WriteLine("Your number : ");
             int myInput = Convert.ToInt32(Console.ReadLine());
             int addierung = 0;
@@ -22,7 +30,7 @@ namespace ConsoleApp_Uebungen
                 addierung = addierung + i;
                 Console.WriteLine($"Sum : {addierung}");
             }
-
+            */
 
             Console.ReadLine();
 
