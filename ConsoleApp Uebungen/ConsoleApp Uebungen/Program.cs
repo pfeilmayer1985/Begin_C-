@@ -25,7 +25,7 @@ namespace ConsoleApp_Uebungen
                 if (luckyGuess == random_zahl)
                 {
                     Console.WriteLine("You WIN !");
-                    Console.ReadKey();  
+                    Console.ReadKey();
                     state = true;
                 }
                 else if (luckyGuess < random_zahl)
@@ -41,7 +41,7 @@ namespace ConsoleApp_Uebungen
                     luckyGuess = Convert.ToInt32(Console.ReadLine());
                 }
 
-               
+
 
 
             } while (state == false);
