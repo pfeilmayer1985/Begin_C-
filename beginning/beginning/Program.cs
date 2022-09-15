@@ -10,6 +10,27 @@ namespace beginning
     {
         static void Main(string[] args)
         {
+
+            string entry = "Das is ein Text mit Woertern";
+            //0: Das
+            //1: ist
+            //2: ein
+            //3: Text
+            string[] entries = entry.Split(' ');
+
+            foreach(string wort in entries)
+            {
+                Console.WriteLine(wort);
+            }
+
+            Console.WriteLine("");
+
+            for(int i = 0; i< entries.Length; i++)
+            {
+                Console.WriteLine(entries[i]);
+            }
+
+            /*
             int i = 1;
             do
             {
@@ -23,8 +44,6 @@ namespace beginning
                 i++;
             }
 
-
-            /*
              int i = 1;
              while (i <= 10)
              {
