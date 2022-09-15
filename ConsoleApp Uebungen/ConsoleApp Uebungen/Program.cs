@@ -11,11 +11,18 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Write me something nice : ");
-            string myInput = Console.ReadLine();
+            Console.WriteLine("Your number : ");
+            int myInput = Convert.ToInt32(Console.ReadLine());
+            int addierung = 0;
 
-            string myOutput = myInput.ToUpper();
-            Console.WriteLine(myOutput);    
+            for (int i = 0; i <= myInput; i++)
+            {
+                Console.WriteLine($"Current number : {i}");
+                
+                addierung = addierung + i;
+                Console.WriteLine($"Sum : {addierung}");
+            }
+
 
             Console.ReadLine();
 
