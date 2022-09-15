@@ -17,6 +17,10 @@ namespace beginning
             {
                 Console.WriteLine("Du kommst hier net rein!");
             }
+            else if (age < 28)
+            {
+                Console.WriteLine("Show me your ID");
+            }
             else
             {
                 Console.WriteLine("Viel Spass");
