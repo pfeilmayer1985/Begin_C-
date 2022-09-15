@@ -10,7 +10,22 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("How many entries do you want for your Array");
+            int arraySize = Convert.ToInt32(Console.ReadLine());
+            int[] myArray = new int[arraySize];
 
+            for (int i = 0; i < arraySize; i++)
+            {
+                Console.WriteLine($"Enter number {i} of {arraySize} into Array :");
+                int arrayEntry = Convert.ToInt32(Console.ReadLine());
+                myArray[i]=arrayEntry;
+            }
+            foreach (int i in myArray)
+            {
+                Console.WriteLine(i);
+            }
+
+            /*
             string nameArray = "Mona,Marie,Erwin,Marcello,Jonas,Philipp,Andreas,Lukas,Johannes,Leon,Robin,Niklas,Robert,Jan";
             Console.WriteLine($"The Team : {nameArray}");
             string[] mySplittedArray = nameArray.Split(',');
@@ -26,9 +41,7 @@ namespace ConsoleApp_Uebungen
                     Console.WriteLine(wort);
                 }
             }
-
-
-
+            */
 
             /*
             Console.WriteLine("Your number : ");
