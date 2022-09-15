@@ -11,11 +11,20 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Your first decimal number : ");
-            double numA = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Your second decimal number : ");
-            double numB = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"First number is {numA}, second number is {numB}. Sum : {numA + numB}");
+            Console.WriteLine("Your text : ");
+            string myInput = Console.ReadLine();
+
+            string adTwentyY = myInput.PadLeft(20, 'y');
+            Console.WriteLine(adTwentyY);   
+
+            /* 
+             string[] myInputArray = myInput.Split();
+            
+            for (int i = 0; i <= 20; i++)
+            {
+                Console.WriteLine(myInputArray[i].Replace('y');
+            }
+            */
             Console.ReadLine();
 
 
