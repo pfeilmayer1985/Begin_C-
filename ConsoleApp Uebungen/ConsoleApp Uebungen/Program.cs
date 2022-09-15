@@ -28,7 +28,13 @@ namespace ConsoleApp_Uebungen
 
             int max = myArray.Max();
             int min = myArray.Min();
-            
+            double ave = Convert.ToDouble(myArray.Average());
+
+            Console.WriteLine();
+
+            Console.WriteLine($"The biggest number is : {max}");
+            Console.WriteLine($"The smallest number is : {min}");
+            Console.WriteLine($"The average is : {ave}");
 
             /*
             string nameArray = "Mona,Marie,Erwin,Marcello,Jonas,Philipp,Andreas,Lukas,Johannes,Leon,Robin,Niklas,Robert,Jan";
