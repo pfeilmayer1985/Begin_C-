@@ -11,15 +11,15 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Your text is :");
-            string userText = Console.ReadLine();
-            int charLength = userText.Length;
-            Console.WriteLine($"Text length: {charLength} characters");
+            Console.WriteLine("Your first decimal number : ");
+            double numA = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Your second decimal number : ");
+            double numB = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"First number is {numA}, second number is {numB}. Sum : {numA + numB}");
+            Console.ReadLine();
 
-            /* string replacedUserText = userText.Replace('U', 'u').Replace('G', 'g');
-             Console.WriteLine($"Replaced text : {replacedUserText}");
-            */
-            Console.ReadLine(); 
+
+
 
 
         }
