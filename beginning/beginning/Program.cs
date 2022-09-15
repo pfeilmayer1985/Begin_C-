@@ -10,15 +10,12 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wie heißt du?");
-            string userName = Console.ReadLine();
-            Console.WriteLine($"Hello {userName}");
-            Console.WriteLine("Wie alt bist du aktuell ?");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Wie alt bist du in X Jahren?");
-            int nextYear = Convert.ToInt32(Console.ReadLine());
-            int sumYears = age + nextYear;
-            Console.WriteLine($"{userName}, du bist also in {nextYear} Jahren, {sumYears}");
+            Console.WriteLine("Wie gross bist du (in m) ?");
+            //double height = Convert.ToDouble(Console.ReadLine());
+            //decimal height = Convert.ToDecimal(Console.ReadLine());
+            float height = float.Parse(Console.ReadLine());
+            int multiplicator = 3;
+            Console.WriteLine($"Du bist {height*multiplicator}m groß.");
             Console.ReadLine();
         }
     }
