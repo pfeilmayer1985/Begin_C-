@@ -14,8 +14,8 @@ namespace ConsoleApp_Uebungen
             Console.WriteLine("Your text : ");
             string myInput = Console.ReadLine();
 
-            string adTwentyY = myInput.PadLeft(20, 'y');
-            Console.WriteLine(adTwentyY);   
+            string adThirtyY = myInput.PadRight(30, 'y');
+            Console.WriteLine(adThirtyY);   
 
             /* 
              string[] myInputArray = myInput.Split();
