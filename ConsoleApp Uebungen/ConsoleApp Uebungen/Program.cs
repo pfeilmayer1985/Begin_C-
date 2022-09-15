@@ -14,7 +14,7 @@ namespace ConsoleApp_Uebungen
             Console.WriteLine("Write me something nice : ");
             string myInput = Console.ReadLine();
 
-            bool myOutput = myInput.Contains("abc");
+            string myOutput = myInput.ToUpper();
             Console.WriteLine(myOutput);    
 
             Console.ReadLine();
