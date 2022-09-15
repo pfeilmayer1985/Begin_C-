@@ -10,13 +10,19 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wie gross bist du (in m) ?");
-            //double height = Convert.ToDouble(Console.ReadLine());
-            //decimal height = Convert.ToDecimal(Console.ReadLine());
-            float height = float.Parse(Console.ReadLine());
-            int multiplicator = 3;
-            Console.WriteLine($"Du bist {height*multiplicator}m groß.");
+            Console.WriteLine("Wie alt bist du ?");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            if (age < 18)
+            {
+                Console.WriteLine("Du kommst hier net rein!");
+            }
+            else
+            {
+                Console.WriteLine("Viel Spass");
+            };
             Console.ReadLine();
+
         }
     }
 }
