@@ -13,7 +13,7 @@ namespace beginning
             Console.WriteLine("Gib mir ein Wort!");
             string entry = Console.ReadLine();
 
-            string replacedEntry = entry.Replace("U", "G").Replace("u", "g");
+            string replacedEntry = entry.Replace("Uni", "Kindergarten").Replace("versity", " Spiele");
 
             Console.WriteLine($"Der alte Text is : {entry}");
             Console.WriteLine($"Der neue Text is : {replacedEntry}");
