@@ -10,14 +10,11 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gib mir ein Wort!");
+            Console.WriteLine("Talk to me!");
             string entry = Console.ReadLine();
 
-            string replacedEntry = entry.Replace("Uni", "Kindergarten").Replace("versity", " Spiele");
-
-            Console.WriteLine($"Der alte Text is : {entry}");
-            Console.WriteLine($"Der neue Text is : {replacedEntry}");
-            
+            string trimmed_entry = entry.Trim(' ', 'a');
+            Console.WriteLine($"Old entry : {entry}; new entry : {trimmed_entry}");
 
             Console.ReadLine();
 
