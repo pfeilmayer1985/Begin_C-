@@ -12,7 +12,10 @@ namespace beginning
         {
             Console.WriteLine("Wie heißt du?");
             string userName = Console.ReadLine();
-            Console.WriteLine($"Hello World! I am {userName}");
+            Console.WriteLine($"Hello {userName}");
+            Console.WriteLine("Wie alt bist du?");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"{userName}, du bist also {age} ");
             Console.ReadLine();
         }
     }
