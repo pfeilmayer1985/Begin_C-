@@ -13,9 +13,12 @@ namespace beginning
             Console.WriteLine("Wie heißt du?");
             string userName = Console.ReadLine();
             Console.WriteLine($"Hello {userName}");
-            Console.WriteLine("Wie alt bist du?");
+            Console.WriteLine("Wie alt bist du aktuell ?");
             int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"{userName}, du bist also {age} ");
+            Console.WriteLine("Wie alt bist du in X Jahren?");
+            int nextYear = Convert.ToInt32(Console.ReadLine());
+            int sumYears = age + nextYear;
+            Console.WriteLine($"{userName}, du bist also in {nextYear} Jahren, {sumYears}");
             Console.ReadLine();
         }
     }
