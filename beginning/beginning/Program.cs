@@ -13,8 +13,8 @@ namespace beginning
             Console.WriteLine("Talk to me!");
             string entry = Console.ReadLine();
 
-            string trimmed_entry = entry.Trim(' ', 'a');
-            Console.WriteLine($"Old entry : {entry}; new entry : {trimmed_entry}");
+            string substring_entry = entry.Substring(3);
+            Console.WriteLine($"Old entry : {entry}; new entry : {substring_entry}");
 
             Console.ReadLine();
 
