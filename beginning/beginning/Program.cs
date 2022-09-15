@@ -13,7 +13,7 @@ namespace beginning
             Console.WriteLine("Talk to me!");
             string entry = Console.ReadLine();
 
-            string substring_entry = entry.Substring(3);
+            string substring_entry = entry.Substring(3, 5);
             Console.WriteLine($"Old entry : {entry}; new entry : {substring_entry}");
 
             Console.ReadLine();
