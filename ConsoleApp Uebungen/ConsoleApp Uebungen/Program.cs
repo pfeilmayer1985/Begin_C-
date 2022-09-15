@@ -12,13 +12,15 @@ namespace ConsoleApp_Uebungen
         {
 
             string nameArray = "Mona,Marie,Erwin,Marcello,Jonas,Philipp,Andreas,Lukas,Johannes,Leon,Robin,Niklas,Robert,Jan";
+            Console.WriteLine($"The Team : {nameArray}");
             string[] mySplittedArray = nameArray.Split(',');
-
+            Console.WriteLine("Letter to search for:");
+            string letter = Console.ReadLine(); 
 
 
             foreach (string wort in mySplittedArray)
             {
-                bool myOutput = wort.Contains("e");
+                bool myOutput = wort.Contains(letter);
                 if (myOutput.Equals(true))
                 {
                     Console.WriteLine(wort);
