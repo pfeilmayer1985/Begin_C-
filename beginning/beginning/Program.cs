@@ -13,7 +13,8 @@ namespace beginning
             Console.WriteLine("Wie alt bist du ?");
             int age = Convert.ToInt32(Console.ReadLine());
 
-            if (age < 18)
+            /*
+             if (age < 18)
             {
                 Console.WriteLine("Du kommst hier net rein!");
             }
@@ -25,6 +26,7 @@ namespace beginning
             {
                 Console.WriteLine("Viel Spass");
             };
+            */
             Console.ReadLine();
 
         }
