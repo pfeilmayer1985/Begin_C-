@@ -11,13 +11,21 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Your text with many spaces for and after please : ");
+            Console.WriteLine("Write a list of whatever, words separated with ';' : ");
             string myInput = Console.ReadLine();
+            string[] myInputArray = myInput.Split(';');
 
-            Console.WriteLine($"Your text initial text is : ={myInput}=");
-            string myAlteredInput = myInput.Trim(' ');
+            foreach (string wort in myInputArray)
+            {
+                Console.WriteLine(wort);
+            }
 
-            Console.WriteLine($"Your cleaned up text is : ={myAlteredInput}=");
+
+
+            //Console.WriteLine($"Your text initial text is : ={myInput}=");
+            //string myAlteredInput = myInput.Trim(' ');
+
+           // Console.WriteLine($"Your cleaned up text is : ={myAlteredInput}=");
 
             /* 
              string[] myInputArray = myInput.Split();
