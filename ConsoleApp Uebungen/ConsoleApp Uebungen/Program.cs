@@ -13,9 +13,12 @@ namespace ConsoleApp_Uebungen
 
             Console.WriteLine("Your text is :");
             string userText = Console.ReadLine();
+            int charLength = userText.Length;
+            Console.WriteLine($"Text length: {charLength} characters");
 
-            string replacedUserText = userText.Replace('U', 'u').Replace('G', 'g');
-            Console.WriteLine($"Replaced text : {replacedUserText}");
+            /* string replacedUserText = userText.Replace('U', 'u').Replace('G', 'g');
+             Console.WriteLine($"Replaced text : {replacedUserText}");
+            */
             Console.ReadLine(); 
 
 
