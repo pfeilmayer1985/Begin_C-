@@ -20,236 +20,78 @@ namespace ConsoleApp_Uebungen
             int kapitalDanach = 0;
             int myBet = 10;
             int gewinn = 0;
-
-            Console.WriteLine($"Welcome to Vegas. You have {kapital}$ in your pocket.");
-            Console.WriteLine("You are determined to lose your money by playing Roulette.");
-            Console.WriteLine("");
-            Console.WriteLine($"You bet {myBet}$ on PAIR numbers.");
-            Console.WriteLine("");
+            int verluss = 10;
+            bool winGame = false;
 
             Random myRandomNumber = new Random();
-            geworfeneZahl = myRandomNumber.Next(0, 37);
-            anzahlDesSpiels++;
-            Console.WriteLine($"Actual number of games played : {anzahlDesSpiels}.");
-            Console.WriteLine($"The winning number is : {geworfeneZahl}.");
-            Console.WriteLine("");
 
-            if (geworfeneZahl % 2 == 0 && geworfeneZahl != 0)
+            while (kapital > 0)
             {
-                kapitalDavor = kapital;
-                gewinn = myBet * 2;
-                kapitalDanach = kapitalDavor + gewinn;
-                Console.WriteLine($"You just won {gewinn}$, and your new credit is {kapitalDanach}$.");
+                //Console.Clear();
+                Console.WriteLine($"Welcome to Vegas. You have {kapital}$ in your pocket.");
+                Console.WriteLine("You are determined to lose your money by playing Roulette.");
+                Console.WriteLine("");
+                Console.WriteLine($"You bet {myBet}$ on PAIR numbers.");
+                Console.WriteLine("");
 
-            }
-            else if (geworfeneZahl == 0)
-            {
-                kapitalDavor = kapital;
-                gewinn = myBet;
-                kapitalDanach = kapitalDavor + gewinn;
-                Console.WriteLine($"You just won {gewinn}$, and your new credit is {kapitalDanach}$.");
-            }
-            else
-            {
-                kapitalDavor = kapital;
-                gewinn = myBet;
-                kapitalDanach = kapitalDavor - gewinn;
-                Console.WriteLine($"You just lost {gewinn}$, and your new credit is {kapitalDanach}$. Your wife will be proud !");
-            }
+                kapital = kapital - myBet;
+                geworfeneZahl = myRandomNumber.Next(0, 37);
+                anzahlDesSpiels++;
+                Console.WriteLine($"Actual number of games played : {anzahlDesSpiels}.");
+                Console.WriteLine($"The winning number is : {geworfeneZahl}.");
+                Console.WriteLine("");
 
-            Console.ReadLine();
-
-
-
-
-
-
-            /*
-
-            // Aufgabe 2, Seite 5:
-
-            List<int> myIntergerList = new List<int>() { 5, 3, 7 };
-
-            string myOption = "";
-
-            do
-            {
-                Console.Write("Enter a number : ");
-                myIntergerList.Add(Convert.ToInt32(Console.ReadLine()));
-                Console.Clear();
-                Console.Write("Enter another number (y/n) ? ");
-                myOption = Console.ReadLine();
-                Console.Clear();
-
-            } while (myOption == "y");//option == false);
-
-            //5.	Füge an Position 2 die Zahl 99 hinzu und gebe die Liste aus
-
-            myIntergerList.Insert(1, 99);
-
-            //6.	Füge die Zahlen 91, 92, 93 gleichzeitig hinzu und gebe die Liste aus
-
-            myIntergerList.AddRange(new int[] { 91, 92, 93 });
-
-            //7.	Entferne das Element an der 1. Stelle und gebe die Liste aus
-
-            myIntergerList.RemoveAt(0);
-
-            //8.	Entferne die Zahl 99 ohne zu wissen wo sie gerade steht und gebe die Liste aus
-
-            myIntergerList.Remove(99);
-
-            //9.	Lösche das Letzte Element der Liste und gebe die Liste aus
-
-            int myCurrentListRage = myIntergerList.Count;
-            myIntergerList.RemoveAt(myCurrentListRage - 1);
-
-
-            Console.WriteLine("Your original list looks like : ");
-            Console.Write(" [");
-
-            for (int i = 0; i < myIntergerList.Count; i++)
-            {
-                Console.Write($" | {myIntergerList[i]} | ");
-
-            }
-
-            Console.Write("] ");
-
-            //10. Schaue dir die Vorgeschlagenen Methoden von Listen an und probiere einige aus. (z.B. Sort, Reverse, )
-            //10. Using SORT
-
-            myIntergerList.Sort();
-
-            Console.WriteLine("");
-            Console.WriteLine("Your arranged list looks like : ");
-            Console.Write(" [");
-
-            for (int i = 0; i < myIntergerList.Count; i++)
-            {
-                Console.Write($" | {myIntergerList[i]} | ");
-
-            }
-
-            Console.Write("] ");
-
-            //10. Schaue dir die Vorgeschlagenen Methoden von Listen an und probiere einige aus. (z.B. Sort, Reverse, )
-            //10. Using REVERSE
-
-            myIntergerList.Reverse();
-
-            Console.WriteLine("");
-            Console.WriteLine("Your reverse-arranged list looks like : ");
-            Console.Write(" [");
-
-            for (int i = 0; i < myIntergerList.Count; i++)
-            {
-                Console.Write($" | {myIntergerList[i]} | ");
-
-            }
-
-            Console.Write("] ");
-
-
-            //11.Lösche alle Zahlen größer als 80 und gebe die Liste aus
-
-            for (int i = 0; i < myIntergerList.Count; i++)
-            {
-                if (myIntergerList[i] > 80)
+                if (geworfeneZahl % 2 == 0 && geworfeneZahl != 0)
                 {
-                    myIntergerList.Remove(myIntergerList[i]);
-                    i--;
+                    gewinn = myBet * 2;
+                    kapital = kapital + gewinn;
+                    winGame = true;
+                    Console.WriteLine($"You just won {gewinn}$, and your new credit is {kapital}$.");
+                }
+                else if (geworfeneZahl == 0)
+                {
+                    Console.WriteLine($"Try again. Your new credit is {kapital}$.");
+                    
+                }
+                else
+                {
+                    winGame = false;
+                    Console.WriteLine($"You just lost {myBet}$, and your new credit is {kapital}$. Your wife will be proud !");
                 }
 
+                if (kapital > 10000 && winGame == true)
+                {
+                    myBet = 10;
+                }
+                else if (kapital > 10000 && winGame == false)
+                {
+                    myBet = myBet * 2;
+                }
+                else if (kapital < 10000 )
+                {
+                    int gesamtVerlust = 10000 - kapital;
+                    myBet = gesamtVerlust * 2;
+                }
+                
+                if (kapital < myBet)
+                {
+                    myBet = kapital;
+                }
+                if (myBet > 1000)
+                {
+                    myBet = 1000;
+                }
+
+                Console.ReadLine();
+
             }
-
-            myIntergerList.Sort();
-            Console.WriteLine("");
-            Console.WriteLine("All your numbers over 80 are now gone : ");
-            Console.Write(" [");
-
-            for (int i = 0; i < myIntergerList.Count; i++)
-            {
-                Console.Write($" | {myIntergerList[i]} | ");
-
-            }
-            Console.Write("] ");
 
             Console.ReadLine();
 
 
-            */
-
-
-            /*
-            Console.WriteLine("We are using addition and multiplication from the new methodes.");
-
-            int zahl1 = 121;
-            int zahl2 = 5;
-
-            Console.WriteLine($"Addition : {Add(zahl1, zahl2)}, Substraction : {SubstractN(zahl1, zahl2)}, Multiplication : {MultiplyM(zahl1, zahl2)}, Division : {DivideN((double)zahl1, (double)zahl2)}.");
-            Console.ReadLine();
-
-            */
-            /*
-             * List<string> names = ListNames();
-
-             foreach (var name in names)
-             {
-                 Console.WriteLine(name);
-             }
-            */
-
-
         }
 
-        /*
-        static int Add(int z1, int z2)
-        {
-            int summe = z1 + z2;
-            return summe;
-        }
-
-        static int SubstractN(int z1, int z2)
-        {
-            int substraction = z1 - z2;
-            return substraction;
-        }
-
-        static int MultiplyM(int z1, int z2)
-        {
-            int multiplication = z1 * z2;
-            return multiplication;
-        }
-
-        static int DivideN(int z1, int z2)
-        {
-            int divisionN = z1 / z2;
-            return divisionN;
-        }
-
-        static double DivideN(double z1, double z2)
-        {
-            double divisionN = z1 / z2;
-            return divisionN;
-        }
-
-        */
-
-        //static ruckgabetyp methodenname (parameter)
-        /*  
-        static List<string> ListNames()
-
-        {
-          List<string> name = new List<string>();
-            name.Add("ABC");
-
-            //Ruckgabevariable
-            return name;
-
-
-    }
-        */
+    
 
     }
 }
