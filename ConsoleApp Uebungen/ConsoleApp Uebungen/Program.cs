@@ -11,47 +11,63 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
-            Random r = new Random();
-            int random_zahl = r.Next(0, 10);
 
+            // [   |   |   |   |   ]
+            int[] zahlen = new int[5];
 
+            // [ 26 | 8 | 12 | 3 | 6 ]
+            int[] zahlen2 = new int[] { 26, 8, 12, 3, 6 };
 
-            Console.WriteLine("Try your luck :");
-            int luckyGuess = Convert.ToInt32(Console.ReadLine());
-            bool state = false;
-
-            do
+            //fill the first "zahlen" Array
+            for (int i = 0; i < zahlen.Length; i++)
             {
-                if (luckyGuess == random_zahl)
-                {
-                    Console.WriteLine("You WIN !");
-                    Console.ReadKey();
-                    state = true;
-                }
-                else if (luckyGuess < random_zahl)
-                {
-                    Console.WriteLine("You need a bigger number !");
-                    Console.WriteLine("Try your luck again :");
-                    luckyGuess = Convert.ToInt32(Console.ReadLine());
-                }
-                else
-                {
-                    Console.WriteLine("You need a smaller number !");
-                    Console.WriteLine("Try your luck again :");
-                    luckyGuess = Convert.ToInt32(Console.ReadLine());
-                }
+                Console.Write("A number for the Array :");
+                zahlen[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            
+            //output the content from "zahlen" Array
 
+            Console.WriteLine("Your Array :");
 
+            for (int i = 0; i < zahlen.Length; i++)
+            {
+                Console.Write($"{zahlen[i]} |");
+            }
+            Console.ReadLine();
 
+            /*
+             Random r = new Random();
 
-            } while (state == false);
+             int random_zahl = r.Next(0, 10);
 
+             Console.WriteLine("Try your luck :");
+             int luckyGuess = Convert.ToInt32(Console.ReadLine());
+             bool state = false;
 
+             do
+             {
+                 if (luckyGuess == random_zahl)
+                 {
+                     Console.WriteLine("You WIN !");
+                     Console.ReadKey();
+                     state = true;
+                 }
+                 else if (luckyGuess < random_zahl)
+                 {
+                     Console.WriteLine("You need a bigger number !");
+                     Console.WriteLine("Try your luck again :");
+                     luckyGuess = Convert.ToInt32(Console.ReadLine());
+                 }
+                 else
+                 {
+                     Console.WriteLine("You need a smaller number !");
+                     Console.WriteLine("Try your luck again :");
+                     luckyGuess = Convert.ToInt32(Console.ReadLine());
+                 }
 
-
-
+             } while (state == false);
+            */
         }
-
 
     }
 }
