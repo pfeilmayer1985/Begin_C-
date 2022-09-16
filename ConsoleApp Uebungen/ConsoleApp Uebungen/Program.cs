@@ -50,15 +50,20 @@ namespace ConsoleApp_Uebungen
                 if (retryOp == "y")
                 {
                     retry = true;
+                    Console.Clear();
                 }
                 else if (retryOp == "n")
                 {
                     retry = false;
+                    Console.Clear();
+                    Console.Write("Thanks for playing !");
                 }
                 else
                 {
-                    Console.Write("Just go home, mate, you're drunk. Again !");
                     retry = false;
+                    Console.Clear();
+                    Console.Write("Just go home, mate, you're drunk." +
+                        " Again !");
                 }
 
             } while (retry == true);
