@@ -48,7 +48,29 @@ namespace ConsoleApp_Uebungen
 
             } while (myOption == "y");//option == false);
 
-            Console.WriteLine("Your List looks like : ");
+            //5.	Füge an Position 2 die Zahl 99 hinzu und gebe die Liste aus
+
+            myIntergerList.Insert(1, 99);
+
+            //6.	Füge die Zahlen 91, 92, 93 gleichzeitig hinzu und gebe die Liste aus
+
+            myIntergerList.AddRange(new int[] { 91, 92, 93 });
+
+            //7.	Entferne das Element an der 1. Stelle und gebe die Liste aus
+
+            myIntergerList.RemoveAt(0);
+
+            //8.	Entferne die Zahl 99 ohne zu wissen wo sie gerade steht und gebe die Liste aus
+
+            myIntergerList.Remove(99);
+
+            //9.	Lösche das Letzte Element der Liste und gebe die Liste aus
+
+            int myCurrentListRage = myIntergerList.Count;
+            myIntergerList.RemoveAt(myCurrentListRage-1);
+
+                        
+            Console.WriteLine("Your original list looks like : ");
             Console.Write(" [");
 
             for (int i = 0; i < myIntergerList.Count; i++)
@@ -58,6 +80,38 @@ namespace ConsoleApp_Uebungen
             }
 
             Console.Write("] ");
+
+            //10.	Schaue dir die Vorgeschlagenen Methoden von Listen an und probiere einige aus. (z.B. Sort, Reverse, )
+
+            myIntergerList.Sort();
+
+            Console.WriteLine("");
+            Console.WriteLine("Your arranged list looks like : ");
+            Console.Write(" [");
+
+            for (int i = 0; i < myIntergerList.Count; i++)
+            {
+                Console.Write($" | {myIntergerList[i]} | ");
+
+            }
+
+            Console.Write("] ");
+
+            myIntergerList.Reverse();
+
+            Console.WriteLine("");
+            Console.WriteLine("Your reverse-arranged list looks like : ");
+            Console.Write(" [");
+
+            for (int i = 0; i < myIntergerList.Count; i++)
+            {
+                Console.Write($" | {myIntergerList[i]} | ");
+
+            }
+
+            Console.Write("] ");
+
+
             Console.ReadLine();
 
 
