@@ -11,6 +11,93 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
+            bool retry = false;
+
+            do
+            {
+                Console.Write("Your first number is : ");
+                int numOne = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Your second number is : ");
+                int numTwo = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Your operator is : ");
+                string yourOperator = Console.ReadLine();
+
+                switch (yourOperator)
+                {
+                    case "+":
+                        Console.WriteLine($"Your result is (+) : {numOne + numTwo}");
+                        break;
+                    case "-":
+                        Console.WriteLine($"Your result is (-) : {numOne - numTwo}");
+                        break;
+                    case "*":
+                        Console.WriteLine($"Your result is (*) : {numOne * numTwo}");
+                        break;
+                    case "/":
+                        Console.WriteLine($"Your result is (/) : {numOne / numTwo}");
+                        break;
+                    case "%":
+                        Console.WriteLine($"Your result is (%): {numOne % numTwo}");
+                        break;
+                    default:
+                        Console.WriteLine("Unknown Operator!");
+                        break;
+
+                }
+                Console.Write("Retry (y/n) : ");
+                string retryOp = Console.ReadLine();
+
+                if (retryOp == "y")
+                {
+                    retry = true;
+                }
+                else if (retryOp == "n")
+                {
+                    retry = false;
+                }
+                else
+                {
+                    Console.Write("Just go home, mate, you're drunk. Again !");
+                    retry = false;
+                }
+
+            } while (retry == true);
+
+            Console.ReadLine();
+
+
+            /*
+            
+            string zahl = Console.ReadLine();
+            //int zahl = Convert.ToInt32(Console.ReadLine());
+
+            switch (zahl)
+            {
+                case "1":
+                    //case 1:
+                    Console.WriteLine("Die Zahl is 1");
+                    break;
+                case "2":
+                    //case 2:
+                    Console.WriteLine("Die Zahl is 2");
+                    break;
+                case "3":
+                    //case 3:
+                    Console.WriteLine("Die Zahl is 3");
+                    break;
+                default:
+                    Console.WriteLine("Kein Fall tritt ein!");
+                    break;
+            }
+
+            Console.ReadLine();
+
+            */
+
+
+            /*
+
+
             //For-Schleife: Aufgabe 5
 
             //count from 0 to 101
@@ -43,6 +130,8 @@ namespace ConsoleApp_Uebungen
 
             Console.ReadLine();
 
+
+            */
 
             /*
             
