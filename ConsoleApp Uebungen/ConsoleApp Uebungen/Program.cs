@@ -13,11 +13,65 @@ namespace ConsoleApp_Uebungen
         {
 
 
+            int kapital = 10000;
+            int anzahlDesSpiels = 0;
+            int geworfeneZahl = 0;
+            int kapitalDavor = 0;
+            int kapitalDanach = 0;
+            int myBet = 10;
+            int gewinn = 0;
+
+            Console.WriteLine($"Welcome to Vegas. You have {kapital}$ in your pocket.");
+            Console.WriteLine("You are determined to lose your money by playing Roulette.");
+            Console.WriteLine("");
+            Console.WriteLine($"You bet {myBet}$ on PAIR numbers.");
+            Console.WriteLine("");
+
+            Random myRandomNumber = new Random();
+            geworfeneZahl = myRandomNumber.Next(0, 37);
+            anzahlDesSpiels++;
+            Console.WriteLine($"Actual number of games played : {anzahlDesSpiels}.");
+            Console.WriteLine($"The winning number is : {geworfeneZahl}.");
+            Console.WriteLine("");
+
+            if (geworfeneZahl % 2 == 0 && geworfeneZahl != 0)
+            {
+                kapitalDavor = kapital;
+                gewinn = myBet * 2;
+                kapitalDanach = kapitalDavor + gewinn;
+                Console.WriteLine($"You just won {gewinn}$, and your new credit is {kapitalDanach}$.");
+
+            }
+            else if (geworfeneZahl == 0)
+            {
+                kapitalDavor = kapital;
+                gewinn = myBet;
+                kapitalDanach = kapitalDavor + gewinn;
+                Console.WriteLine($"You just won {gewinn}$, and your new credit is {kapitalDanach}$.");
+            }
+            else
+            {
+                kapitalDavor = kapital;
+                gewinn = myBet;
+                kapitalDanach = kapitalDavor - gewinn;
+                Console.WriteLine($"You just lost {gewinn}$, and your new credit is {kapitalDanach}$. Your wife will be proud !");
+            }
+
+            Console.ReadLine();
+
+
+
+
+
+
+            /*
+
             // Aufgabe 2, Seite 5:
 
             List<int> myIntergerList = new List<int>() { 5, 3, 7 };
-            bool option = false;
+
             string myOption = "";
+
             do
             {
                 Console.Write("Enter a number : ");
@@ -122,6 +176,9 @@ namespace ConsoleApp_Uebungen
             Console.Write("] ");
 
             Console.ReadLine();
+
+
+            */
 
 
             /*
