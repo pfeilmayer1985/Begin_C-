@@ -10,7 +10,65 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
+            //For-Schleife: Aufgabe 5
 
+
+            for (int i = 0; i < 101; i++)
+            {
+
+
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine($"FizzBuzz");
+                }
+
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine($"Fizz");
+                }
+
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine($"Buzz");
+                }
+
+                else
+                {
+                    Console.WriteLine($"{i}");
+                }
+
+
+            }
+
+
+            Console.ReadLine();
+
+
+            /*
+            
+            string[] namen = new string[13];
+            string[] namen2 = new string[] {"Lukas", "Jonas", "Mona", "Marie",
+                                            "Philipp", "Jan", "Erwin", "Leon",
+                                            "Marcello", "Johannes", "Robin",
+                                            "Andreas", "Robert"};
+
+            for (int i = 0; i < namen2.Length; i++)
+            {
+
+                namen2[i] += " 222 ";
+            }
+
+
+            foreach (string trainee in namen2)
+            {
+                Console.WriteLine(trainee);
+            }
+
+            Console.ReadLine();
+
+            */
+
+            /*
 
             // [   |   |   |   |   ]
             int[] zahlen = new int[5];
@@ -34,6 +92,8 @@ namespace ConsoleApp_Uebungen
                 Console.Write($"{zahlen[i]} |");
             }
             Console.ReadLine();
+
+            */
 
             /*
              Random r = new Random();
