@@ -15,17 +15,50 @@ namespace ConsoleApp_Uebungen
 
             // Aufgabe 2, Seite 5:
 
-            List<int> myIntergerList = new List<int>();
-            myIntergerList.Add(5);
-            myIntergerList.Add(3);
-            myIntergerList.Add(7);
+            List<int> myIntergerList = new List<int>() { 5, 3, 7 };
+            bool option = false;
+            string myOption = "";
+            do
+            {
+                Console.Write("Enter a number : ");
+                myIntergerList.Add(Convert.ToInt32(Console.ReadLine()));
+                Console.Clear();
+                Console.Write("Enter another number (y/n) ? ");
+                myOption = Console.ReadLine();
+                Console.Clear();
+
+                //if (myOption == "y")
+                //{
+                //    option = false;
+                //}
+                //else if (myOption == "n")
+                //{
+                //    option = true;
+                //}
+                //else if (myOption == "")
+                //{
+                //    option = true;
+                //}
+                //else
+                //{
+                //    option = true;
+                //    Console.Clear();
+                //    Console.WriteLine("Go home mate, your are drunk !");
+                //}
+
+            } while (myOption == "y");//option == false);
+
+            Console.WriteLine("Your List looks like : ");
+            Console.Write(" [");
 
             for (int i = 0; i < myIntergerList.Count; i++)
             {
-                Console.WriteLine(myIntergerList[i]);
+                Console.Write($" | {myIntergerList[i]} | ");
 
             }
-            Console.ReadLine(); 
+
+            Console.Write("] ");
+            Console.ReadLine();
 
 
             /*
