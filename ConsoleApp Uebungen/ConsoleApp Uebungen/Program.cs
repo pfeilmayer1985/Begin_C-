@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleApp_Uebungen
 {
@@ -10,6 +11,33 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
+
+            // "List" - classe
+
+            // List<int> list = new List<int>();
+
+            Console.Write("How many names in the list : ");
+            int numberOfEntries = Convert.ToInt32(Console.ReadLine());
+
+            List<string> nameList = new List<string>();
+            Console.Clear();
+            for (int i = 0; i < numberOfEntries; i++)
+            {
+                Console.Write($"Add name {i + 1} of {numberOfEntries} : ");
+                nameList.Add(Console.ReadLine());
+            }
+            Console.Clear();
+            Console.WriteLine("Your List now looks like :");
+            Console.Write(" [ ");
+            foreach (string name in nameList)
+            {
+                Console.Write($" | {name} " + $"| ");
+            }
+            Console.Write(" ] ");
+
+            Console.ReadLine();
+
+            /*
 
             bool retry = false;
 
@@ -70,6 +98,8 @@ namespace ConsoleApp_Uebungen
 
             Console.ReadLine();
 
+
+            */
 
             /*
             
