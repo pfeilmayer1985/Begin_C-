@@ -27,25 +27,6 @@ namespace ConsoleApp_Uebungen
                 myOption = Console.ReadLine();
                 Console.Clear();
 
-                //if (myOption == "y")
-                //{
-                //    option = false;
-                //}
-                //else if (myOption == "n")
-                //{
-                //    option = true;
-                //}
-                //else if (myOption == "")
-                //{
-                //    option = true;
-                //}
-                //else
-                //{
-                //    option = true;
-                //    Console.Clear();
-                //    Console.WriteLine("Go home mate, your are drunk !");
-                //}
-
             } while (myOption == "y");//option == false);
 
             //5.	Füge an Position 2 die Zahl 99 hinzu und gebe die Liste aus
@@ -67,9 +48,9 @@ namespace ConsoleApp_Uebungen
             //9.	Lösche das Letzte Element der Liste und gebe die Liste aus
 
             int myCurrentListRage = myIntergerList.Count;
-            myIntergerList.RemoveAt(myCurrentListRage-1);
+            myIntergerList.RemoveAt(myCurrentListRage - 1);
 
-                        
+
             Console.WriteLine("Your original list looks like : ");
             Console.Write(" [");
 
@@ -81,7 +62,8 @@ namespace ConsoleApp_Uebungen
 
             Console.Write("] ");
 
-            //10.	Schaue dir die Vorgeschlagenen Methoden von Listen an und probiere einige aus. (z.B. Sort, Reverse, )
+            //10. Schaue dir die Vorgeschlagenen Methoden von Listen an und probiere einige aus. (z.B. Sort, Reverse, )
+            //10. Using SORT
 
             myIntergerList.Sort();
 
@@ -97,6 +79,9 @@ namespace ConsoleApp_Uebungen
 
             Console.Write("] ");
 
+            //10. Schaue dir die Vorgeschlagenen Methoden von Listen an und probiere einige aus. (z.B. Sort, Reverse, )
+            //10. Using REVERSE
+
             myIntergerList.Reverse();
 
             Console.WriteLine("");
@@ -111,6 +96,30 @@ namespace ConsoleApp_Uebungen
 
             Console.Write("] ");
 
+
+            //11.Lösche alle Zahlen größer als 80 und gebe die Liste aus
+
+            for (int i = 0; i < myIntergerList.Count; i++)
+            {
+                if (myIntergerList[i] > 80)
+                {
+                    myIntergerList.Remove(myIntergerList[i]);
+                    i--;
+                }
+
+            }
+
+            myIntergerList.Sort();
+            Console.WriteLine("");
+            Console.WriteLine("All your numbers over 80 are now gone : ");
+            Console.Write(" [");
+
+            for (int i = 0; i < myIntergerList.Count; i++)
+            {
+                Console.Write($" | {myIntergerList[i]} | ");
+
+            }
+            Console.Write("] ");
 
             Console.ReadLine();
 
