@@ -12,6 +12,23 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
+
+            // Aufgabe 2, Seite 5:
+
+            List<int> myIntergerList = new List<int>();
+            myIntergerList.Add(5);
+            myIntergerList.Add(3);
+            myIntergerList.Add(7);
+
+            for (int i = 0; i < myIntergerList.Count; i++)
+            {
+                Console.WriteLine(myIntergerList[i]);
+
+            }
+            Console.ReadLine(); 
+
+
+            /*
             Console.WriteLine("We are using addition and multiplication from the new methodes.");
 
             int zahl1 = 121;
@@ -20,7 +37,7 @@ namespace ConsoleApp_Uebungen
             Console.WriteLine($"Addition : {Add(zahl1, zahl2)}, Substraction : {SubstractN(zahl1, zahl2)}, Multiplication : {MultiplyM(zahl1, zahl2)}, Division : {DivideN((double)zahl1, (double)zahl2)}.");
             Console.ReadLine();
 
-
+            */
             /*
              * List<string> names = ListNames();
 
@@ -33,6 +50,7 @@ namespace ConsoleApp_Uebungen
 
         }
 
+        /*
         static int Add(int z1, int z2)
         {
             int summe = z1 + z2;
@@ -63,6 +81,8 @@ namespace ConsoleApp_Uebungen
             return divisionN;
         }
 
+        */
+
         //static ruckgabetyp methodenname (parameter)
         /*  
         static List<string> ListNames()
@@ -73,7 +93,7 @@ namespace ConsoleApp_Uebungen
 
             //Ruckgabevariable
             return name;
-          
+
 
     }
         */
