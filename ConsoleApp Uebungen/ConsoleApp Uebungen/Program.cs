@@ -16,9 +16,9 @@ namespace ConsoleApp_Uebungen
             do
             {
                 Console.Write("Your first number is : ");
-                int numOne = Convert.ToInt32(Console.ReadLine());
+                double numOne = Convert.ToDouble(Console.ReadLine());
                 Console.Write("Your second number is : ");
-                int numTwo = Convert.ToInt32(Console.ReadLine());
+                double numTwo = Convert.ToDouble(Console.ReadLine());
                 Console.Write("Your operator is : ");
                 string yourOperator = Console.ReadLine();
 
