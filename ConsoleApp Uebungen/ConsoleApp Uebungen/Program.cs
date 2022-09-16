@@ -10,36 +10,36 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
+
             //For-Schleife: Aufgabe 5
 
-
-            for (int i = 0; i < 101; i++)
+            //count from 0 to 101
+            for (int i = 1; i < 101; i++)
             {
-
-
+                //check if modulo - division rest - is 0 when dividing through 3 and 5
                 if (i % 3 == 0 && i % 5 == 0)
                 {
                     Console.WriteLine($"FizzBuzz");
                 }
-
+                //check if modulo is 0 when dividing through 3
                 else if (i % 3 == 0)
                 {
                     Console.WriteLine($"Fizz");
                 }
-
+                
+                //check if modulo is 0 when dividing through 5
                 else if (i % 5 == 0)
                 {
                     Console.WriteLine($"Buzz");
                 }
 
+                //if modulo is NOT 0 then the number is displayed instead of text
                 else
                 {
                     Console.WriteLine($"{i}");
                 }
 
-
             }
-
 
             Console.ReadLine();
 
