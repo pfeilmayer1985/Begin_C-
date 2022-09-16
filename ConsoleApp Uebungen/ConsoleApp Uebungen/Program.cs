@@ -11,15 +11,13 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
-            //METHODE - static void main - ist eine methode
-
 
             Console.WriteLine("We are using addition and multiplication from the new methodes.");
 
-            int zahl1 = 125;
-            int zahl2 = 25;
+            int zahl1 = 121;
+            int zahl2 = 5;
 
-            Console.WriteLine($"Addition : {Add(zahl1, zahl2)}, Substraction : {SubstractN(zahl1, zahl2)}, Multiplication : {MultiplyM(zahl1, zahl2)}, Division : {DivideN(zahl1, zahl2)}.");
+            Console.WriteLine($"Addition : {Add(zahl1, zahl2)}, Substraction : {SubstractN(zahl1, zahl2)}, Multiplication : {MultiplyM(zahl1, zahl2)}, Division : {DivideN((double)zahl1, (double)zahl2)}.");
             Console.ReadLine();
 
 
@@ -56,6 +54,12 @@ namespace ConsoleApp_Uebungen
         static int DivideN(int z1, int z2)
         {
             int divisionN = z1 / z2;
+            return divisionN;
+        }
+
+        static double DivideN(double z1, double z2)
+        {
+            double divisionN = z1 / z2;
             return divisionN;
         }
 
