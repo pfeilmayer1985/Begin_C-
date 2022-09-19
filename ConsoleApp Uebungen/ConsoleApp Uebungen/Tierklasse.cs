@@ -15,9 +15,9 @@ namespace ConsoleApp_Uebungen
         public double Lebensdauer { get; set; }
         public double Gewicht { get; set; }
         public bool Fell { get; set; }
-        public bool Hungry { get;  set; }
-        public bool Thirsty { get;  set; }
-        public bool MakeSomeNoise { get;  set; }
+        public bool Hungry { get; set; }
+        public bool Thirsty { get; set; }
+        public string MakeSomeNoise { get; set; }
 
 
 
@@ -37,7 +37,7 @@ namespace ConsoleApp_Uebungen
 
         public void GiveDescription()
         {
-            Console.WriteLine($"I am {Name}, I am a {GetType().Name}, I am {Alter} years old, {Groesse} cm tall, expected to live {Lebensdauer} years and my weight is {Gewicht} Kg.");
+            Console.WriteLine($"I am {Name}, I am a {GetType().Name}, I am {Alter} years old, {Groesse} cm tall, expected to live {Lebensdauer} years and my weight is {Gewicht} Kg. I sound like {MakeSomeNoise} !");
         }
 
 
@@ -69,19 +69,8 @@ namespace ConsoleApp_Uebungen
             }
         }
 
-        public void Sounds()
-        {
-            if (MakeSomeNoise == true)
-            {
-                Console.WriteLine("Wroooor Miau Ham");
 
-            }
-            else
-            {
-                MakeSomeNoise = true;
-                Console.WriteLine("*dead silent*");
-            }
-        }
+
 
     }
 }

@@ -15,7 +15,7 @@ namespace ConsoleApp_Uebungen
         {
         }
 
-        public Katze(string name, string tierart, double alter, double groesse, double lebensdauer, double gewicht, bool fell, bool hungry, bool tirsty, bool makesomenoise)
+        public Katze(string name, string tierart, double alter, double groesse, double lebensdauer, double gewicht, bool fell, bool hungry, bool tirsty, string makesomenoise)
         {
             Name = name;
             Tierart = tierart;
@@ -78,16 +78,8 @@ namespace ConsoleApp_Uebungen
                 inputCatFromUser.Thirsty = false;
             }
 
-            Console.Write("Am I loud y/n :");
-            string makeNoiseread = Console.ReadLine();
-            if (makeNoiseread == "y")
-            {
-                inputCatFromUser.MakeSomeNoise = true;
-            }
-            else
-            {
-                inputCatFromUser.MakeSomeNoise = false;
-            }
+            Console.Write("How do I sound like? :");
+            inputCatFromUser.MakeSomeNoise = Console.ReadLine();
 
             return inputCatFromUser;
         }

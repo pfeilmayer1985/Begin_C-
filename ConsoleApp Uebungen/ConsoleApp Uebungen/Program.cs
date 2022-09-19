@@ -14,16 +14,19 @@ namespace ConsoleApp_Uebungen
         {
 
             List<Tierklasse> tierklasses = new List<Tierklasse>();
-            tierklasses.Add(new Hund("Maya", "Dog", 1.5, 65, 14, 50, true, true, false, true));
-            tierklasses.Add(new Katze("Mr Miau", "Cat", 2, 23, 10, 11, true, false, false, false));
+            tierklasses.Add(new Hund("Maya", "Dog", 1.5, 65, 14, 50, true, true, false, "Woof Woof"));
+            tierklasses.Add(new Katze("Mr Miau", "Cat", 2, 23, 10, 11, true, false, false, "Miiau Miau"));
+            
+            //Console.WriteLine("Want to add a dog or a cat ? y/n")
+
             tierklasses.Add(Katze.AskUserForaCat());
+            tierklasses.Add(Hund.AskUserForaDog());
 
             foreach (Tierklasse tier in tierklasses)
             {
                 tier.GiveDescription();
                 tier.Essen();
                 tier.Trinken();
-                tier.Sounds();
 
             }
 
