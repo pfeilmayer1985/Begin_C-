@@ -12,31 +12,53 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
+            Car c1 = new Car(13494, 4, 1998, "Ford", "Mondeo", "2.0 TDcI Titanium X", "Black");
 
-            Car c1 = new Car();
-            c1.TypeId = 13494;
-            c1.Make = "Ford";
-            c1.Model = "Mondeo";
-            c1.TypeName = "2.0 TDcI Titanium X";
-            c1.ccm = 1998;
-            c1.Color = "Black";
-            c1.Tyres = 4;
 
+            /*
+                        Car c1 = new Car();
+                        c1.TypeId = 13494;
+                        c1.Make = "Ford";
+                        c1.Model = "Mondeo";
+                        c1.TypeName = "2.0 TDcI Titanium X";
+                        c1.Ccm = 1998;
+                        c1.Color = "Black";
+                        c1.Tyres = 4;
+            */
 
             //c1.PrinCarInformation();
 
-            Car c2 = new Car();
-            c2.TypeId = 149557;
-            c2.Make = "Dacia";
-            c2.Model = "Duster";
-            c2.TypeName = "1.5 DcI 4x4";
-            c2.ccm = 1497;
-            c2.Color = "Black";
-            c2.Tyres = 4;
+            Car c2 = new Car(149557, 4, 1497, "Dacia", "Duster", "1.5 DcI 4x4", "Black");
 
-            //c2.PrinCarInformation();
 
-            List<Car> carsList = new List<Car>() { c1, c2 };
+            List<Car> carsList = new List<Car>();
+            carsList.Add(c1);
+            carsList.Add(c2);
+
+            Console.WriteLine("How many mars do you want to save ?");
+            int numOfCars = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < numOfCars; i++)
+            {
+                Console.WriteLine("ID :");
+                int carId = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Make :");
+                string carMake = Console.ReadLine();
+                Console.WriteLine("Model :");
+                string carModel = Console.ReadLine();
+                Console.WriteLine("Type :");
+                string carType = Console.ReadLine();
+                Console.WriteLine("Color :");
+                string carColor = Console.ReadLine();
+                Console.WriteLine("CCM :");
+                int carCcm = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wheels :");
+                int carWheels = Convert.ToInt32(Console.ReadLine());
+
+                Car TempCar = new Car(carId, carWheels, carCcm, carMake, carModel, carType, carColor);
+                carsList.Add(TempCar);
+            }
+
             foreach (Car car in carsList)
             {
                 car.PrinCarInformation();
