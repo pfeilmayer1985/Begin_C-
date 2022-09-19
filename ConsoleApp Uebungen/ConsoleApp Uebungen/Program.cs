@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,79 +13,33 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
+            Car c1 = new Car();
+            c1.TypeId = 13494;
+            c1.Make = "Ford";
+            c1.Model = "Mondeo";
+            c1.TypeName = "2.0 TDcI Titanium X";
+            c1.ccm = 1998;
+            c1.Color = "Black";
+            c1.Tyres = 4;
 
-            int kapital = 10000;
-            int anzahlDesSpiels = 0;
-            int geworfeneZahl = 0;
-            int myBet = 10;
-            bool winGame = false;
 
-            Random myRandomNumber = new Random();
+            //c1.PrinCarInformation();
 
-            Console.WriteLine($"Welcome to Vegas.");
-            Console.WriteLine("You are determined to lose your money by playing Roulette.");
+            Car c2 = new Car();
+            c2.TypeId = 149557;
+            c2.Make = "Dacia";
+            c2.Model = "Duster";
+            c2.TypeName = "1.5 DcI 4x4";
+            c2.ccm = 1497;
+            c2.Color = "Black";
+            c2.Tyres = 4;
 
-            while (kapital > 0)
+            //c2.PrinCarInformation();
+
+            List<Car> carsList = new List<Car>() { c1, c2 };
+            foreach (Car car in carsList)
             {
-                //Console.Clear();
-                Console.WriteLine($"You still have {kapital}$ in your pocket.");
-                Console.WriteLine("");
-                Console.WriteLine($"You bet {myBet}$ on PAIR numbers.");
-                Console.WriteLine("");
-
-                kapital = kapital - myBet;
-                geworfeneZahl = myRandomNumber.Next(0, 37);
-                anzahlDesSpiels++;
-                Console.WriteLine($"Actual number of games played : {anzahlDesSpiels}.");
-                Console.WriteLine($"The winning number is : {geworfeneZahl}.");
-                Console.WriteLine("");
-
-                if (geworfeneZahl % 2 == 0 && geworfeneZahl != 0)
-                {
-                    kapital = kapital + myBet * 2;
-                    winGame = true;
-                    Console.WriteLine($"You just won {myBet * 2}$, and your new credit is {kapital}$.");
-                }
-                else if (geworfeneZahl == 0)
-                {
-                    Console.WriteLine($"Try again. Your new credit is {kapital}$.");
-
-                }
-                else
-                {
-                    kapital = kapital - myBet;
-                    winGame = false;
-                    Console.WriteLine($"You just lost {myBet}$, and your new credit is {kapital}$. Your wife will be proud !");
-                }
-
-                if (kapital > 10000 && winGame == true)
-                {
-                    myBet = 10;
-                }
-                else if (kapital > 10000 && winGame == false)
-                {
-                    myBet = myBet * 2;
-                }
-                else if (kapital < 10000)
-                {
-                   kapital = kapital-myBet;
-                    
-                }
-
-                if (kapital < myBet)
-                {
-                    myBet = kapital;
-                }
-                if (myBet > 1000)
-                {
-                    myBet = 1000;
-                }
-                if ((myBet * 2) > kapital)
-                {
-                    myBet = kapital / 2;
-                }
-                Console.ReadLine();
-
+                car.PrinCarInformation();
             }
 
             Console.ReadLine();
