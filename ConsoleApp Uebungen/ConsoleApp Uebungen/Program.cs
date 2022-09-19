@@ -54,6 +54,10 @@ namespace ConsoleApp_Uebungen
             }
 
 
+            List<Vehicle> fahrzeuge = new List<Vehicle>();
+            fahrzeuge.Add(new Motorcycle());
+            fahrzeuge.Add(new Car("Ford", "Focus", "Mk3 1.5 TDcI", "Silver", 4, 1497, 321354351));
+
             Console.ReadLine();
 
 
