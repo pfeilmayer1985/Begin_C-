@@ -35,29 +35,16 @@ namespace ConsoleApp_Uebungen
             carsList.Add(c1);
             carsList.Add(c2);
 
-            Console.WriteLine("How many mars do you want to save ?");
+            Console.Write("How many mars do you want to save ?");
             int numOfCars = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
 
             for (int i = 0; i < numOfCars; i++)
             {
-                Console.WriteLine("ID :");
-                int carId = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Make :");
-                string carMake = Console.ReadLine();
-                Console.WriteLine("Model :");
-                string carModel = Console.ReadLine();
-                Console.WriteLine("Type :");
-                string carType = Console.ReadLine();
-                Console.WriteLine("Color :");
-                string carColor = Console.ReadLine();
-                Console.WriteLine("CCM :");
-                int carCcm = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wheels :");
-                int carWheels = Convert.ToInt32(Console.ReadLine());
-
-                Car TempCar = new Car(carId, carWheels, carCcm, carMake, carModel, carType, carColor);
-                carsList.Add(TempCar);
+                carsList.Add(Car.AskUserForCar());
             }
+
+            Console.Clear();
 
             foreach (Car car in carsList)
             {

@@ -27,11 +27,32 @@ namespace ConsoleApp_Uebungen
             TypeName = typeName;
             Color = color;
         }   
+        public Car() 
+        { }
 
         public void PrinCarInformation()
         {
             Console.WriteLine($"My car is a {Make} {Model}, {TypeName}, engine size {Ccm} cm2, colour {Color}, with {Tyres} tyres.");
         }
+        public static Car AskUserForCar()
 
+        {
+            Car c = new Car();
+            Console.Write("ID :");
+            c.TypeId = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Make :");
+            c.Make = Console.ReadLine();
+            Console.Write("Model :");
+            c.Model = Console.ReadLine();
+            Console.Write("Type :");
+            c.TypeName = Console.ReadLine();
+            Console.Write("Color :");
+            c.Color = Console.ReadLine();
+            Console.Write("CCM :");
+            c.Ccm = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Wheels :");
+            c.Tyres = Convert.ToInt32(Console.ReadLine());
+            return c;
+        }
     }
 }
