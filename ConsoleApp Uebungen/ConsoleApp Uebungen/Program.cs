@@ -20,7 +20,7 @@ namespace ConsoleApp_Uebungen
             int kapitalDanach = 0;
             int myBet = 10;
             int gewinn = 0;
-            int verluss = 10;
+            int gesamtVerlust = 10;
             bool winGame = false;
 
             Random myRandomNumber = new Random();
@@ -55,6 +55,7 @@ namespace ConsoleApp_Uebungen
                 }
                 else
                 {
+                    kapital = kapital - myBet;
                     winGame = false;
                     Console.WriteLine($"You just lost {myBet}$, and your new credit is {kapital}$. Your wife will be proud !");
                 }
@@ -69,7 +70,7 @@ namespace ConsoleApp_Uebungen
                 }
                 else if (kapital < 10000 )
                 {
-                    int gesamtVerlust = 10000 - kapital;
+                    gesamtVerlust = 10000 - kapital;
                     myBet = gesamtVerlust * 2;
                 }
                 
@@ -81,6 +82,11 @@ namespace ConsoleApp_Uebungen
                 {
                     myBet = 1000;
                 }
+                if ((myBet*2) > kapital)
+                {
+                    myBet = kapital / 2;
+                }
+
 
                 Console.ReadLine();
 
