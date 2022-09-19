@@ -15,23 +15,43 @@ namespace ConsoleApp_Uebungen
 
 
 
-            Dreieck dreieckD = new Dreieck();
-            dreieckD.Seite1 = 2;
+            Dreieck dreieckD = new Dreieck(2,4,10);
+                                  
+            /*dreieckD.Seite1 = 2;
             dreieckD.Seite2 = 4;
-            dreieckD.Seite3 = 10;
+            dreieckD.Seite3 = 10;*/
 
             float dreiecksFlaeche = dreieckD.Flaeche();
             float dreiecksUmfang = dreieckD.Umfang();
 
-            Console.WriteLine($"Mein {dreieckD.GetType().Name} hat eine Flaeche von {dreieckD.Flaeche()} und Umfang von {dreieckD.Umfang()}");
+            //  Console.WriteLine($"Mein {dreieckD.GetType().Name} hat eine Flaeche von {dreiecksFlaeche} und Umfang von {dreiecksUmfang}");
 
-            Circle circleC = new Circle();
-            circleC.Radius = 5;
+            Circle circleC = new Circle(5);
+            //circleC.Radius = 5;
             float kreisFlaeche = circleC.Flaeche();
             float kreisUmfang = circleC.Umfang();
 
-            Console.WriteLine($"Mein {circleC.GetType().Name} hat eine Flaeche von {circleC.Flaeche()} und Umfang von {circleC.Umfang()}");
+            //  Console.WriteLine($"Mein {circleC.GetType().Name} hat eine Flaeche von {kreisFlaeche} und Umfang von {kreisUmfang}");
 
+            Rechteck rechteckRe = new Rechteck(10,20);
+            //rechteckRe.Seite1 = 10;
+            //rechteckRe.Seite2 = 20;
+
+            float rechtecksFlaeche = rechteckRe.Flaeche();
+            float rechtecksUmfang = rechteckRe.Umfang();
+
+            //  Console.WriteLine($"Mein {rechteckRe.GetType().Name} hat eine Flaeche von {rechtecksFlaeche} und Umfang von {rechtecksUmfang}");
+
+            List<IGeometry> geometries = new List<IGeometry>();
+            geometries.Add(dreieckD);
+            geometries.Add(circleC);
+            geometries.Add(rechteckRe);
+
+            foreach (IGeometry g in geometries)
+            {
+                Console.WriteLine($"Mein {g.GetType().Name} hat eine Flaeche von {g.Flaeche()} und Umfang von {g.Umfang()}");
+
+            }
 
 
             Console.ReadLine();

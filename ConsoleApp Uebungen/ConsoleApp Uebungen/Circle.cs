@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_Uebungen
 {
-    public class Circle
+    public class Circle : IGeometry
     {
         public float Radius { get; set; }
+        
+        public Circle(float radius) 
+        {
+        Radius = radius;
+        }
         public float Umfang()
         {
             return 2 * (float)Math.PI * Radius;
