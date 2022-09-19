@@ -16,7 +16,6 @@ namespace ConsoleApp_Uebungen
         public int Ccm { get; set; }
         public int TypeId { get; set; }
         public bool MotorLauft { get; private set; }
-        //public bool Bremsen { get; set; }
         public int Geschwindigkeit { get; private set; }
 
         public void Starten()

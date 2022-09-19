@@ -13,13 +13,30 @@ namespace ConsoleApp_Uebungen
         static void Main(string[] args)
         {
 
+            List<Tierklasse> tierklasses = new List<Tierklasse>();
+            tierklasses.Add(new Hund("Maya", "Dog", 1.5, 65, 14, 50, true, true, false, true));
+            tierklasses.Add(new Katze("Mr Miau", "Cat", 2, 23, 10, 11, true, false, false, false));
+            tierklasses.Add(Katze.AskUserForaCat());
+
+            foreach (Tierklasse tier in tierklasses)
+            {
+                tier.GiveDescription();
+                tier.Essen();
+                tier.Trinken();
+                tier.Sounds();
+
+            }
 
 
+
+            Console.ReadLine();
+
+            /*
             Dreieck dreieckD = new Dreieck(2, 4, 10);
 
-            /*dreieckD.Seite1 = 2;
+            dreieckD.Seite1 = 2;
             dreieckD.Seite2 = 4;
-            dreieckD.Seite3 = 10;*/
+            dreieckD.Seite3 = 10;
 
             float dreiecksFlaeche = dreieckD.Flaeche();
             float dreiecksUmfang = dreieckD.Umfang();
@@ -53,8 +70,10 @@ namespace ConsoleApp_Uebungen
 
             }
 
+            */
 
-            List<Vehicle> fahrzeuge = new List<Vehicle>();
+            /* 
+             List<Vehicle> fahrzeuge = new List<Vehicle>();
             fahrzeuge.Add(new Motorcycle("BMW", "GSXR 650", "650", "Blue", 2, 649, 321354350));
             fahrzeuge.Add(new Car("Ford", "Focus", "Mk3 1.5 TDcI", "Silver", 4, 1497, 321354351));
 
@@ -68,8 +87,9 @@ namespace ConsoleApp_Uebungen
                 v.Bremsen();
                 v.Bremsen();
             }
+            */
 
-            Console.ReadLine();
+
 
 
 
