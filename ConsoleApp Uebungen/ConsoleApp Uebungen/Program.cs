@@ -35,7 +35,7 @@ namespace ConsoleApp_Uebungen
             carsList.Add(c1);
             carsList.Add(c2);
 
-            Console.Write("How many mars do you want to save ?");
+            Console.Write("How many cars do you want to save ?");
             int numOfCars = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 
