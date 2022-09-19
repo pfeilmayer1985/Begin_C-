@@ -14,23 +14,21 @@ namespace ConsoleApp_Uebungen
         {
 
 
-            Console.WriteLine("Make a new house :");
+            Console.WriteLine("Make a new house !");
+            
             List<Haus> buildNewHouse = new List<Haus>();
 
             buildNewHouse.Add(Haus.AddNewHouse());
-
+            Console.WriteLine();
             buildNewHouse[0].PrintQM();
+            Console.WriteLine();
             buildNewHouse[0].HausWohnFlaeche();
-
-            //foreach (Haus element in buildNewHouse)
-            //{
-            //element.PrintHouseInformation();
-            //}
+            Console.WriteLine();
             buildNewHouse[0].PrintHouseInformation();
-
+            Console.WriteLine();
             Console.WriteLine("Change the color of your house. Set the new color:");
             buildNewHouse[0].ChangeColor(Console.ReadLine());
-
+            Console.WriteLine();
             buildNewHouse[0].PrintHouseInformation();
 
             
