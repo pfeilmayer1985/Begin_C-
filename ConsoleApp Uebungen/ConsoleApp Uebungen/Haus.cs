@@ -11,7 +11,7 @@ namespace ConsoleApp_Uebungen
     internal class Haus
     {
 
-
+        //these are properties / eigenschaften
         public double Laenge { get; set; }
         public double Breite { get; set; }
         public double Hoehe { get; set; }
@@ -22,7 +22,7 @@ namespace ConsoleApp_Uebungen
         public double Grundstuecklaenge { get; set; }
         public double Grundstueckbreite { get; set; }
 
-
+        //constructor
         public Haus(double laenge, double breite, double hoehe, string dachart, string putzfarbe, int anzahletagen, int preis, double grundstucklenge, double grundstuckbreite)
         {
             Laenge = laenge;
@@ -36,8 +36,11 @@ namespace ConsoleApp_Uebungen
             Grundstueckbreite = grundstuckbreite;
         }
 
+
+        // constructor gol
         private Haus() { }
 
+        //metoda, adauga casa noua
         public static Haus AddNewHouse()
         {
             Haus newHouse = new Haus();
@@ -63,22 +66,26 @@ namespace ConsoleApp_Uebungen
             return newHouse;
         }
 
+        //metoda, afiseaza suprafata casei, o calculeaza si o afiseaza
         public void PrintQM()
         {
             Console.WriteLine($"Your property has qm = {Grundstuecklaenge} * {Grundstueckbreite} = {Grundstuecklaenge * Grundstueckbreite} m2");
         }
 
+        //metoda, afiseaza proprietatile casei ce au fost definite de utilizator si de constructorul de mai sus
         public void PrintHouseInformation()
         {
             Console.WriteLine($"Your house has Laenge = {Laenge} ; Breite =  {Breite} ; Dachart = {Dachart} ; Putzfarbe = {Putzfarbe} ; " +
                 $"Anzahl Etagen = {AnzahlEtagen} ; Preis = {Preis} ; Grundstuecklaenge = {Grundstuecklaenge} ; Grundstueckbreite = {Grundstueckbreite}.");
         }
 
+        //metoda calculeaza si afiseaza suprafata disponibila a casei cu toate etajele
         public void HausWohnFlaeche()
         {
             Console.WriteLine($"HausWohnFlaeche ist = {Laenge} * {Breite} * {AnzahlEtagen} = {Laenge * Breite * AnzahlEtagen}");
         }
 
+        //metoda ce inlocuieste culoarea casei dupa un input de-al utilizatorului
         public void ChangeColor(string neueFarbe)
         {
 

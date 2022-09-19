@@ -14,6 +14,33 @@ namespace ConsoleApp_Uebungen
         {
 
 
+
+            Dreieck dreieckD = new Dreieck();
+            dreieckD.Seite1 = 2;
+            dreieckD.Seite2 = 4;
+            dreieckD.Seite3 = 10;
+
+            float dreiecksFlaeche = dreieckD.Flaeche();
+            float dreiecksUmfang = dreieckD.Umfang();
+
+            Console.WriteLine($"Mein {dreieckD.GetType().Name} hat eine Flaeche von {dreieckD.Flaeche()} und Umfang von {dreieckD.Umfang()}");
+
+            Circle circleC = new Circle();
+            circleC.Radius = 5;
+            float kreisFlaeche = circleC.Flaeche();
+            float kreisUmfang = circleC.Umfang();
+
+            Console.WriteLine($"Mein {circleC.GetType().Name} hat eine Flaeche von {circleC.Flaeche()} und Umfang von {circleC.Umfang()}");
+
+
+
+            Console.ReadLine();
+
+
+
+
+            /*
+
             Console.WriteLine("Make a new house !");
             
             List<Haus> buildNewHouse = new List<Haus>();
@@ -37,6 +64,7 @@ namespace ConsoleApp_Uebungen
 
             Console.ReadLine();
 
+            */
 
             // Car c1 = new Car(13494, 4, 1998, "Ford", "Mondeo", "2.0 TDcI Titanium X", "Black");
 
