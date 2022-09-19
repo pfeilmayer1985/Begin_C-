@@ -12,7 +12,35 @@ namespace ConsoleApp_Uebungen
     {
         static void Main(string[] args)
         {
-            Car c1 = new Car(13494, 4, 1998, "Ford", "Mondeo", "2.0 TDcI Titanium X", "Black");
+
+
+            Console.WriteLine("Make a new house :");
+            List<Haus> buildNewHouse = new List<Haus>();
+
+            buildNewHouse.Add(Haus.AddNewHouse());
+
+            buildNewHouse[0].PrintQM();
+            buildNewHouse[0].HausWohnFlaeche();
+
+            //foreach (Haus element in buildNewHouse)
+            //{
+            //element.PrintHouseInformation();
+            //}
+            buildNewHouse[0].PrintHouseInformation();
+
+            Console.WriteLine("Change the color of your house. Set the new color:");
+            buildNewHouse[0].ChangeColor(Console.ReadLine());
+
+            buildNewHouse[0].PrintHouseInformation();
+
+            
+
+
+
+            Console.ReadLine();
+
+
+            // Car c1 = new Car(13494, 4, 1998, "Ford", "Mondeo", "2.0 TDcI Titanium X", "Black");
 
 
             /*
@@ -28,6 +56,7 @@ namespace ConsoleApp_Uebungen
 
             //c1.PrinCarInformation();
 
+            /*
             Car c2 = new Car(149557, 4, 1497, "Dacia", "Duster", "1.5 DcI 4x4", "Black");
 
 
@@ -50,8 +79,9 @@ namespace ConsoleApp_Uebungen
             {
                 car.PrinCarInformation();
             }
+            
+            */
 
-            Console.ReadLine();
 
 
         }
