@@ -16,20 +16,18 @@ namespace ConsoleApp_Uebungen
             int kapital = 10000;
             int anzahlDesSpiels = 0;
             int geworfeneZahl = 0;
-            int kapitalDavor = 0;
-            int kapitalDanach = 0;
             int myBet = 10;
-            int gewinn = 0;
-            int gesamtVerlust = 10;
             bool winGame = false;
 
             Random myRandomNumber = new Random();
 
+            Console.WriteLine($"Welcome to Vegas.");
+            Console.WriteLine("You are determined to lose your money by playing Roulette.");
+
             while (kapital > 0)
             {
                 //Console.Clear();
-                Console.WriteLine($"Welcome to Vegas. You have {kapital}$ in your pocket.");
-                Console.WriteLine("You are determined to lose your money by playing Roulette.");
+                Console.WriteLine($"You still have {kapital}$ in your pocket.");
                 Console.WriteLine("");
                 Console.WriteLine($"You bet {myBet}$ on PAIR numbers.");
                 Console.WriteLine("");
@@ -43,15 +41,14 @@ namespace ConsoleApp_Uebungen
 
                 if (geworfeneZahl % 2 == 0 && geworfeneZahl != 0)
                 {
-                    gewinn = myBet * 2;
-                    kapital = kapital + gewinn;
+                    kapital = kapital + myBet * 2;
                     winGame = true;
-                    Console.WriteLine($"You just won {gewinn}$, and your new credit is {kapital}$.");
+                    Console.WriteLine($"You just won {myBet * 2}$, and your new credit is {kapital}$.");
                 }
                 else if (geworfeneZahl == 0)
                 {
                     Console.WriteLine($"Try again. Your new credit is {kapital}$.");
-                    
+
                 }
                 else
                 {
@@ -68,12 +65,12 @@ namespace ConsoleApp_Uebungen
                 {
                     myBet = myBet * 2;
                 }
-                else if (kapital < 10000 )
+                else if (kapital < 10000)
                 {
-                    gesamtVerlust = 10000 - kapital;
-                    myBet = gesamtVerlust * 2;
+                   kapital = kapital-myBet;
+                    
                 }
-                
+
                 if (kapital < myBet)
                 {
                     myBet = kapital;
@@ -82,12 +79,10 @@ namespace ConsoleApp_Uebungen
                 {
                     myBet = 1000;
                 }
-                if ((myBet*2) > kapital)
+                if ((myBet * 2) > kapital)
                 {
                     myBet = kapital / 2;
                 }
-
-
                 Console.ReadLine();
 
             }
@@ -97,7 +92,7 @@ namespace ConsoleApp_Uebungen
 
         }
 
-    
+
 
     }
 }
