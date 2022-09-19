@@ -15,8 +15,8 @@ namespace ConsoleApp_Uebungen
 
 
 
-            Dreieck dreieckD = new Dreieck(2,4,10);
-                                  
+            Dreieck dreieckD = new Dreieck(2, 4, 10);
+
             /*dreieckD.Seite1 = 2;
             dreieckD.Seite2 = 4;
             dreieckD.Seite3 = 10;*/
@@ -33,7 +33,7 @@ namespace ConsoleApp_Uebungen
 
             //  Console.WriteLine($"Mein {circleC.GetType().Name} hat eine Flaeche von {kreisFlaeche} und Umfang von {kreisUmfang}");
 
-            Rechteck rechteckRe = new Rechteck(10,20);
+            Rechteck rechteckRe = new Rechteck(10, 20);
             //rechteckRe.Seite1 = 10;
             //rechteckRe.Seite2 = 20;
 
@@ -55,8 +55,19 @@ namespace ConsoleApp_Uebungen
 
 
             List<Vehicle> fahrzeuge = new List<Vehicle>();
-            fahrzeuge.Add(new Motorcycle());
+            fahrzeuge.Add(new Motorcycle("BMW", "GSXR 650", "650", "Blue", 2, 649, 321354350));
             fahrzeuge.Add(new Car("Ford", "Focus", "Mk3 1.5 TDcI", "Silver", 4, 1497, 321354351));
+
+            foreach (Vehicle v in fahrzeuge)
+            {
+                v.Starten();
+                v.Beschleunigen();
+                v.Beschleunigen();
+                v.Bremsen();
+                v.Starten();
+                v.Bremsen();
+                v.Bremsen();
+            }
 
             Console.ReadLine();
 
